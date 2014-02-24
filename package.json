@@ -1,0 +1,18 @@
+{
+  "name": "ss-jsx",
+  "author": "Kirill Chernyshov <delaguardo@gmail.org>",
+  "description": "JSX wrapper for SocketStream 0.3.x",
+  "version": "0.3.12",
+  "main": "./wrapper.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeLaGuardo/ss-jsx"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "dependencies": {
+    "react-tools": ">= 0.9.0"
+  },
+  "devDependencies": {}
+}
