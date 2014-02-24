@@ -10,3 +10,15 @@ Add `ss-jsx` to your application's `package.json` file and then add this line to
 ```javascript
 ss.client.formatters.add(require('ss-jsx'));
 ```
+
+For using JSX with another programming language that transcompiles to JavaScript pass compiler function in second parameter (example for iced-coffee-script):
+
+```javascript
+ss.client.formatters.add(require('ss-jsx'), {
+    additionalTransform: function (input) {
+        return require('iced-coffee-script').compile(input, {'bare': true});
+    }
+});
+```
+
+
