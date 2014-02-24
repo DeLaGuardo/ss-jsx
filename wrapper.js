@@ -16,7 +16,11 @@ exports.init = function(root, config) {
     contentType: 'text/javascript; charset=utf-8',
 
     compile: function(path, options, cb) {
+      options = options || {};
       var input = fs.readFileSync(path, 'utf8');
+      if (typeof options.additionalTransform == 'function') {
+        input = options.additionalTransform(input);
+      }
       try {
         cb( jsx.transform(input) );
       } catch (e) {
